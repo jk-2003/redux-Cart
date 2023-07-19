@@ -8,7 +8,7 @@ const CartItem = (props) => {
   const dispatch = useDispatch();
 
   const { title, quantity, total, price, id, cartItem } = props.item;
-  console.log(title, quantity, total, price, id,cartItem);
+  // console.log(props.title);
 
   const removeItemHandler = () => {
     dispatch(removefromcart(id));

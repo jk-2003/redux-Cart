@@ -20,15 +20,6 @@ const Cart = (props) => {
             cartItem,
           }}
         />
-        {/* {cartItem.map((item) => {
-          <AddCart
-            id={item.id}
-            title={item.title}
-            quantity={item.quantity}
-            total={item.totalPrice}
-            price={item.price}
-          />;
-        })} */}
 
         {cartItem.map((item) => {
           <CartItem
@@ -42,6 +33,19 @@ const Cart = (props) => {
             }}
           />;
           console.log(item);
+        })}
+
+        
+{cartItem.map((item) => {
+          <CartItem
+            key={item.id}
+              id= {item.id}
+              title= {item.name}
+              quantity= {item.quantity}
+              total={item.totalPrice}
+              price= {item.price}
+          />;
+          console.log(item.name);
         })}
       </ul>
     </Card>
