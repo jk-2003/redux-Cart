@@ -11,7 +11,7 @@ const Cart = (props) => {
     <Card className={classes.cart}>
       <h2>Your Shopping Cart</h2>
       <ul>
-        <CartItem
+        {/* <CartItem
           item={{
             title: "Test Item",
             quantity: 3,
@@ -19,10 +19,11 @@ const Cart = (props) => {
             price: 6,
             cartItem,
           }}
-        />
+        /> */}
 
-        {cartItem.map((item) => {
-          <CartItem
+        {cartItem?.map((item) => {
+
+         return <CartItem
             key={item.id}
             item={{
               id: item.id,
@@ -35,18 +36,6 @@ const Cart = (props) => {
           console.log(item);
         })}
 
-        
-{cartItem.map((item) => {
-          <CartItem
-            key={item.id}
-              id= {item.id}
-              title= {item.name}
-              quantity= {item.quantity}
-              total={item.totalPrice}
-              price= {item.price}
-          />;
-          console.log(item.name);
-        })}
       </ul>
     </Card>
   );
